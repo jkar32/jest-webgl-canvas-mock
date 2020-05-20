@@ -23,7 +23,7 @@ export default function mockPrototype() {
       const ctx = new CanvasRenderingContext2D(this, options);
       generatedContexts.set(this, ctx);
       return ctx;
-    } else if (type === 'webgl' || type === 'experimental-webgl') {
+    } else if (type === 'webgl' || type === 'webgl2' || type === 'experimental-webgl') {
       if (generatedContexts.has(this)) return generatedContexts.get(this);
       const ctx = new WebGLRenderingContext(this, options);
       generatedContexts.set(this, ctx);

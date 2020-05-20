@@ -24,6 +24,11 @@ describe('mock', () => {
     expect(ctx).toBeInstanceOf(WebGLRenderingContext);
   });
 
+  it('context creation of type webgl2 returns WebGLRenderingContext', () => {
+    const ctx = canvas.getContext('webgl2');
+    expect(ctx).toBeInstanceOf(WebGLRenderingContext);
+  });
+
   // it('should expect getContext to be called', () => {
   //   canvas.getContext('2d');
   //   expect(canvas.getContext).toBeCalled();
